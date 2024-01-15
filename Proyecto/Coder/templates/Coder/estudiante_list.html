@@ -2,11 +2,11 @@
 
 {% block contenido %}
     
-    {% for profesor in profesores %}
+    {% for estudiante in estudiantes %}
         <ul>
             <li>
-                {{ profesor.nombre }}
-                {{ profesor.email }}
+                {{ estudiante.nombre }}
+                {{ estudiante.email }}
             </li>
         </ul>    
     {% endfor %}
@@ -14,4 +14,3 @@
     <button><a href="{% url 'index' %}">Atrás</a></button>    
 
 {% endblock contenido %}
-
