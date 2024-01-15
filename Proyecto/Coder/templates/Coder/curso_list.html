@@ -2,16 +2,25 @@
 
 {% block contenido %}
 
+    <h2>Cursos</h2>
+        
+    <table border="1">
+        <thead>
+            <th>Curso</th>
+            <th>Comisión</th>
+            <th>Profesor</th>
+        </thead>
+    <tbody>
         {% for curso in cursos %}
-            <ul>
-                <li>
-                    {{ curso.nombre }}
-                    {{ curso.comision }}
-                    {{ curso.profesor }}
-                </li>
-            </ul>  
+            <tr>
+                <td>{{ curso.nombre }}</td>
+                <td>{{ curso.comision }}</td>
+                <td>{{ curso.profesor }}</td>   
+            </tr>  
         {% endfor %}
-    
-    <button><a href="{% url 'index' %}">Atrás</a></button>
+    </tbody>
+    <table>
+
+    <button><a href="{% url 'index' %}">Inicio</a></button> 
 
 {% endblock contenido %}

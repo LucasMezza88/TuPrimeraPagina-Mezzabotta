@@ -1,16 +1,24 @@
 {% extends 'Coder/base.html' %}
 
 {% block contenido %}
-    
-    {% for estudiante in estudiantes %}
-        <ul>
-            <li>
-                {{ estudiante.nombre }}
-                {{ estudiante.email }}
-            </li>
-        </ul>    
-    {% endfor %}
 
-    <button><a href="{% url 'index' %}">Atrás</a></button>    
+    <h2>Estudiantes</h2>
+        
+    <table border="1">
+        <thead>
+            <th>Estudiante</th>
+            <th>Correo</th>
+        </thead>
+    <tbody>
+        {% for estudiante in estudiantes %}
+            <tr>
+                <td>{{ estudiante.nombre }}</td>
+                <td>{{ estudiante.email }}</td>
+            </tr> 
+    </tbody>   
+    {% endfor %}
+    </table>
+
+    <button><a href="{% url 'index' %}">Inicio</a></button>    
 
 {% endblock contenido %}
