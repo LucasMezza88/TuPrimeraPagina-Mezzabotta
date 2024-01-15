@@ -8,14 +8,12 @@
         <thead>
             <th>Curso</th>
             <th>Comisión</th>
-            <th>Profesor</th>
         </thead>
     <tbody>
         {% for curso in cursos %}
             <tr>
                 <td>{{ curso.nombre }}</td>
-                <td>{{ curso.comision }}</td>
-                <td>{{ curso.profesor }}</td>   
+                <td>{{ curso.comision }}</td>  
             </tr>  
         {% endfor %}
     </tbody>
